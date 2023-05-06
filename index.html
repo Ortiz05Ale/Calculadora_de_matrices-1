@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculaaa!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Calculadora de matrices 2x2</h1>
+    
+    <!--Crear inputs para los valores de las variables-->
+    <div class="calculadora">
+        <p class="matriz_A">A = <span class="corchete">[</span></p>
+        <table class="matriz_content">
+            <tr>
+                <td><input type="text" name="a" id="x1"> x + </td>
+                <td><input type="text" name="b" id="y1"> y = </td>
+                <td><input type="text" name="c" id="t1"></td>
+            </tr>
+            <tr>
+              <td><input type="text" name="c" id="x2"> x + </td>
+              <td><input type="text" name="d" id="y2"> y = </td>
+              <td><input type="text" name="d" id="t2"></td>
+            </tr>
+        </table>
+        <span class="corchete">]</span>
+    </div>
+    <!--Crear boton para llamar al metodo cramer-->
+    <button id="btn" class="boton">Calcular</button>
+    
+    <p id="resultado"></p>
+    <button id="limpiar" class="boton">Limpiar casilleros</button>
+
+    
+    <!--Enlazar el archivo js para la parte de programacion-->
+    <script src="script.js"></script>
+
+</body>
+</html>
