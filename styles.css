@@ -4,6 +4,9 @@
     --color3: #ded1c1;
     --dark: #383838;
 }
+#aparecer{
+    display: none;
+}
 
 body {
     height: 50vh;
