@@ -18,6 +18,13 @@ function mostrar() {
     x21.value = ""
     y22.value = ""
     t2.value = ""
+    resultado.textContent = ""
+    resultado2.textContent = ""
+
+}
+//Funcioón para visualizar el botón de limpiar que está oculto 
+function ver_boton_limpiar(){
+    document.getElementById('aparecer').style.display='block';
 
 }
 
@@ -28,7 +35,8 @@ function determinante2x2(x1, y1, x2, y2) {
     //Variable para los valores que se restaran a los valores anteriores
     let izquierda = y1 * x2
     //Retornar la resta de ambas variables
-    return (derecha - izquierda)
+    determinante = (derecha - izquierda)
+    return determinante;
 }
 
 function cramer2x2() {
@@ -48,12 +56,14 @@ function cramer2x2() {
         let valorY = detY / detA
         //Mostrar ambos valores
         resultado.textContent = 'El valor de x es: ' + valorX + ', y el valor de y es: ' + valorY
+        resultado2.textContent = 'La determinante de la matriz es:'+determinante
     }
 }
 
 //Invocar funcion cramer
 btn.onclick = function() {
     cramer2x2()
+    ver_boton_limpiar()
 }
 
 limpiador.onclick = function() {
