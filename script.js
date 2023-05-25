@@ -5,11 +5,14 @@ let t1 = document.querySelector('#t1')
 let x21 = document.querySelector('#x2')
 let y22 = document.querySelector('#y2')
 let t2 = document.querySelector('#t2')
+let determinante
 
 //Crear variable para el boton 'Calcular'
 let btn = document.querySelector('#btn')
 let limpiador = document.querySelector('#limpiar')
 let resultado = document.querySelector('#resultado')
+let resultado2 = document.querySelector('#resultado2')
+
 
 function mostrar() {
     x11.value = ""
@@ -56,7 +59,7 @@ function cramer2x2() {
         let valorY = detY / detA
         //Mostrar ambos valores
         resultado.textContent = 'El valor de x es: ' + valorX + ', y el valor de y es: ' + valorY
-        resultado2.textContent = 'La determinante de la matriz es:'+determinante
+        resultado2.textContent = 'La determinante de la matriz es:' + determinante
     }
 }
 
