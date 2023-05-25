@@ -14,7 +14,7 @@ let resultado = document.querySelector('#resultado')
 let resultado2 = document.querySelector('#resultado2')
 
 
-function mostrar() {
+function limpiar_casilleros() {
     x11.value = ""
     y12.value = ""
     t1.value = ""
@@ -23,9 +23,9 @@ function mostrar() {
     t2.value = ""
     resultado.textContent = ""
     resultado2.textContent = ""
-
+    document.getElementById('aparecer').style.display='none';
 }
-//Funcioón para visualizar el botón de limpiar que está oculto 
+//Función para visualizar el botón de limpiar que está oculto 
 function ver_boton_limpiar(){
     document.getElementById('aparecer').style.display='block';
 
@@ -70,7 +70,7 @@ btn.onclick = function() {
 }
 
 limpiador.onclick = function() {
-    mostrar()
+    limpiar_casilleros()
 }
 // 1 -3, 1 5 => 8 ----- Deter
 // 1 -3 2, 1 5 10 => x = 5, y = 1 ----- cramer

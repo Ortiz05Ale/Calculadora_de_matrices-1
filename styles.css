@@ -8,6 +8,9 @@
     display: none;
     margin: 2rem;
 }
+.title_matriz {
+    font-size: 2.5rem;
+}
 
 body {
     height: 50vh;
@@ -33,4 +36,9 @@ body {
     font-size: 3rem;
     vertical-align: middle;
     font-weight: 100;
+}
+.boton:hover {
+    opacity: 0.75;
+    cursor: pointer;
+    transition: .25s;
 }
