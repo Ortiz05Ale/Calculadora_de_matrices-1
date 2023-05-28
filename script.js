@@ -1,9 +1,9 @@
 //Crear variables para los valores de la matriz
-let x11 = document.querySelector('#x1')
-let y12 = document.querySelector('#y1')
+let a = document.querySelector('#x1')
+let b = document.querySelector('#y1')
 let t1 = document.querySelector('#t1')
-let x21 = document.querySelector('#x2')
-let y22 = document.querySelector('#y2')
+let c = document.querySelector('#x2')
+let d = document.querySelector('#y2')
 let t2 = document.querySelector('#t2')
 let determinante
 
@@ -15,11 +15,11 @@ let resultado2 = document.querySelector('#resultado2')
 
 
 function limpiar_casilleros() {
-    x11.value = ""
-    y12.value = ""
+    a.value = ""
+    b.value = ""
     t1.value = ""
-    x21.value = ""
-    y22.value = ""
+    c.value = ""
+    d.value = ""
     t2.value = ""
     resultado.textContent = ""
     resultado2.textContent = ""
@@ -43,16 +43,13 @@ function determinante2x2(x1, y1, x2, y2) {
 }
 
 function cramer2x2() {
-    //En el caso de que no se ingrese ningun valor
-    if (isNaN(x11.value) || isNaN(y12.value) || isNaN(t1.value) || isNaN(x21.value) || isNaN(y22.value) || isNaN(t2.value)) {
-        resultado.textContent = 'Ingrese un valor numerico en cada casillero'
-    } else {
+    
         //Obtener el determinante de la matriz 'A'
-        let detA = determinante2x2(Number(x11.value), Number(y12.value), Number(x21.value), Number(y22.value))
+        let detA = determinante2x2(Number(a.value), Number(b.value), Number(c.value), Number(d.value))
         //Obtener el determinante de la matriz 'A' en la columna de las x
-        let detX = determinante2x2(Number(t1.value), Number(t2.value), Number(y12.value), Number(y22.value))
+        let detX = determinante2x2(Number(t1.value), Number(t2.value), Number(b.value), Number(d.value))
         //Obtener el determinante de la matriz 'A' en la columna de las y
-        let detY = determinante2x2(Number(x11.value), Number(x21.value), Number(t1.value), Number(t2.value))
+        let detY = determinante2x2(Number(a.value), Number(c.value), Number(t1.value), Number(t2.value))
         //Obtener el valor de x
         let valorX = detX / detA
         //Obtener el valor de y
@@ -60,7 +57,7 @@ function cramer2x2() {
         //Mostrar ambos valores
         resultado.textContent = 'El valor de x es: ' + valorX + ', y el valor de y es: ' + valorY
         resultado2.textContent = 'La determinante de la matriz es:' + determinante
-    }
+        return x, y
 }
 
 //Invocar funcion cramer
